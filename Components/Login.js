@@ -8,8 +8,8 @@ import { useMoralis } from 'react-moralis';
 
 
 function Login() {
-    const { isAuthenticated, authenticate } = useMoralis();
-    const [isActive, setActive] = useState(false);
+    const { isAuthenticated, authenticate, isAuthenticating } = useMoralis();
+    // const [isActive, setActive] = useState(false);
 
     // if (isAuthenticated){
     //     setActive(flase)
@@ -21,12 +21,13 @@ function Login() {
             <div className='absolute left-1/2 top-1/2 -translate-x-2/4 -translate-y-2/4 z-50 item-center justify-center place-content-center flex flex-col'>
                 {/* <Flip> */}
                     <img src="/transparentLogo.png"
-                    className={isActive ? 'animate-spin w-48 h-48 ': 'w-48 h-48 '}/>
+                    className={isAuthenticating ? 'animate-spin w-48 h-48 ': 'w-48 h-48 '}/>
                 {/* </Flip> */}
 
                 <Zoom bottom>
-                    <button onClick={()=>{
-                        setActive(true)
+                    <button
+                    disabled={isAuthenticating}
+                    onClick={()=>{
                         // console.log(isActive)
                         authenticate()
 
@@ -35,14 +36,20 @@ function Login() {
                     hover:shadow-xl hover:scale-105 active:scale-95 
                     duration-200
                     my-10  z-50 text-xl font-semibold  py-5 px-5 rounded-xl 
-                    bg-gradient-to-r from-red-500  via-violet-500  to-indigo-500'>Login to Talk Net</button>
+                    bg-gradient-to-r from-red-500  via-violet-500  to-indigo-500'>
+                        {isAuthenticating? 'Loading Please wait ...' : 'Login to Talk Net'}
+                        </button>
                 </Zoom>
+                
             </div>
 
             <div>
-                <Image src="https://d1otjdv2bf0507.cloudfront.net/images/Article_Images/ImageForArticle_4983(1).jpg"
+                <Image src="/BG.gif"
                 layout='fill'
                 objectFit='cover'/>
+                {/* <Image src="https://d1otjdv2bf0507.cloudfront.net/images/Article_Images/ImageForArticle_4983(1).jpg"
+                layout='fill'
+                objectFit='cover'/> */}
                 {/* <Image src="https://img.freepik.com/free-vector/neon-light-arrow-direction-perspective_1017-22033.jpg?size=626&ext=jpg"
                 layout='fill'
                 objectFit='cover'/> */}
