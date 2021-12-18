@@ -37,7 +37,7 @@ function Login() {
                     duration-200
                     my-10  z-50 text-xl font-semibold  py-5 px-5 rounded-xl 
                     bg-gradient-to-r from-red-500  via-violet-500  to-indigo-500'>
-                        {isAuthenticating? 'Loading Please wait ...' : 'Login to Talk Net'}
+                        {isAuthenticating? 'Loading ...' : 'Login to Talk Net'}
                         </button>
                 </Zoom>
                 
