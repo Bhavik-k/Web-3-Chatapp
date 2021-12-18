@@ -44,12 +44,9 @@ function Login() {
             </div>
 
             <div>
-                <Image src="/BG.gif"
+                <Image src="https://d1otjdv2bf0507.cloudfront.net/images/Article_Images/ImageForArticle_4983(1).jpg"
                 layout='fill'
                 objectFit='cover'/>
-                {/* <Image src="https://d1otjdv2bf0507.cloudfront.net/images/Article_Images/ImageForArticle_4983(1).jpg"
-                layout='fill'
-                objectFit='cover'/> */}
                 {/* <Image src="https://img.freepik.com/free-vector/neon-light-arrow-direction-perspective_1017-22033.jpg?size=626&ext=jpg"
                 layout='fill'
                 objectFit='cover'/> */}
