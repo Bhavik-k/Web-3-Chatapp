@@ -18,7 +18,7 @@ function Login() {
     return (
         <div className='text-white'>
 
-            <div className='absolute left-1/2 top-1/2 -translate-x-2/4 -translate-y-2/4 z-50 item-center justify-center place-content-center flex flex-col'>
+            <div className='absolute left-1/2 top-1/2 -translate-x-2/4 -translate-y-2/4 z-50 item-center justify-center place-content-center flex flex-col place-content-center'>
                 {/* <Flip> */}
                     <img src="/transparentLogo.png"
                     className={isAuthenticating ? 'animate-spin w-48 h-48 ': 'w-48 h-48 '}/>
